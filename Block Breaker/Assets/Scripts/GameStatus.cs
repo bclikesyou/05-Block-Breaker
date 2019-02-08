@@ -13,6 +13,24 @@ public class GameStatus : MonoBehaviour {
     // State variables
     [SerializeField] int currentScore = 0;
 
+    // Awake occurs before Start in the process order
+    private void Awake()
+    {
+        // Stores how many objects of "Game Status" there are. We only want one.
+        int gameStatusCount = FindObjectsOfType<GameStatus>().Length;
+        if (gameStatusCount > 1)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+
+        else
+        {
+            // This method says don't destroy in the future if there is already one.
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     private void Start()
     {
         // When we start, set our score to read as 0.
