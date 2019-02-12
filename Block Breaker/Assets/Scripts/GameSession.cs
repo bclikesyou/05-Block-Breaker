@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameStatus : MonoBehaviour {
+public class GameSession : MonoBehaviour {
 
     // Config parameters
     [Range(0.1f, 10f)] [SerializeField] float gameSpeed = 1f;
@@ -17,7 +17,7 @@ public class GameStatus : MonoBehaviour {
     private void Awake()
     {
         // Stores how many objects of "Game Status" there are. We only want one.
-        int gameStatusCount = FindObjectsOfType<GameStatus>().Length;
+        int gameStatusCount = FindObjectsOfType<GameSession>().Length;
         if (gameStatusCount > 1)
         {
             gameObject.SetActive(false);
@@ -47,6 +47,11 @@ public class GameStatus : MonoBehaviour {
     {
         currentScore += pointsPerBlockDestroyed;
         scoreText.text = currentScore.ToString();
+    }
+
+    public void RestartScore()
+    {
+        Destroy(gameObject);
     }
 
 }
