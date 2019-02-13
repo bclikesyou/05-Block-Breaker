@@ -228,7 +228,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1796763409882528, guid: bd7b25f8b0a59464e99b853dc63bdace, type: 3}
       propertyPath: m_Name
-      value: 'Game '
+      value: Game Session
       objectReference: {fileID: 0}
     - target: {fileID: 4214567640106948, guid: bd7b25f8b0a59464e99b853dc63bdace, type: 3}
       propertyPath: m_LocalPosition.x
@@ -272,11 +272,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4214567640106948, guid: bd7b25f8b0a59464e99b853dc63bdace, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224806736568750308, guid: bd7b25f8b0a59464e99b853dc63bdace,
-        type: 3}
-      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
